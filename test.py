@@ -21,6 +21,11 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(self.calc.divide(6, 2), 3)
         with self.assertRaises(ZeroDivisionError):
             self.calc.divide(5, 0)
+    
+    def test_pow(self):
+        self.assertEqual(self.calc.pow(2, 3), 8)
+        self.assertEqual(self.calc.pow(2, 0), 1)
+        self.assertEqual(self.calc.pow(2, -1), 0.5)
 
 
 if __name__ == '__main__':

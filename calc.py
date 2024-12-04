@@ -63,3 +63,18 @@ class Calculator:
         if b == 0:
             raise ZeroDivisionError("Деление на ноль")
         return a / b
+    
+    def pow(self, a, b):
+        """Возводит число в степень.
+
+        :param a: Число.
+        :param b: Степень.
+        :type a: int or float
+        :type b: int or float
+        :raises TypeError: если a или b не являются числами.
+        :returns: Результат возведения a в степень b.
+        :rtype: int or float
+        """
+        if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+            raise TypeError("Оба аргумента должны быть числами")
+        return a ** b
