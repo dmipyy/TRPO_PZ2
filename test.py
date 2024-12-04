@@ -26,6 +26,11 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(self.calc.pow(2, 3), 8)
         self.assertEqual(self.calc.pow(2, 0), 1)
         self.assertEqual(self.calc.pow(2, -1), 0.5)
+    
+    def test_XOR(self):
+        self.assertEqual(self.calc.XOR(5, 3), 6)
+        self.assertEqual(self.calc.XOR(0, 1), 1)
+        self.assertEqual(self.calc.XOR(1, 1), 0)
 
 
 if __name__ == '__main__':

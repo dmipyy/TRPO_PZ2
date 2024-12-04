@@ -78,3 +78,18 @@ class Calculator:
         if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
             raise TypeError("Оба аргумента должны быть числами")
         return a ** b
+    
+    def XOR(self, a, b):
+        """Выполняет побитовую операцию XOR над двумя числами.
+    
+        :param a: Первое число.
+        :param b: Второе число.
+        :type a: int
+        :type b: int
+        :raises TypeError: если a или b не являются целыми числами.
+        :returns: Результат побитовой операции XOR над a и b.
+        :rtype: int
+        """
+        if not isinstance(a, int) or not isinstance(b, int):
+            raise TypeError("Оба аргумента должны быть целыми числами")
+        return a ^ b

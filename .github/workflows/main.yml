@@ -24,6 +24,16 @@ jobs:
         python -m pip install --upgrade pip
     - name: Run tests
       run: python test.py
+
+  build_docs:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
     - name: Install Sphinx
       run: pip install sphinx sphinx-rtd-theme
     - name: Build documentation
